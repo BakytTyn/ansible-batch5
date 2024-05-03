@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+  - name: Copy files
+    copy:
+      src: /tmp/kaizen.yml    # local machine, ater the code "remote_scr: yes" it start Remote
+      dest: /root/hello.yml         # remote machine
+      remote_scr: yes
+
+     
+  - name: Create user
+    shell: mkdir -p kaizen
+      
